@@ -1,0 +1,82 @@
+h1 {
+    color: green;
+    text-align: center;
+    margin: auto;
+    font-family: 'Lobster', cursive;
+    
+}
+
+.container1 {
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border: ridge 5px;
+    border-color: silver;
+}
+
+.container2 {
+    box-sizing: border-box;
+    border: ridge 5px;
+}
+
+body {
+    padding: 0px;
+    display: grid;
+    margin: auto;
+    height: 80vmin;
+    width: 80vmin;
+    background-color: ivory;
+}
+
+.query-zone {
+    background-color: white;
+    height: 30vmin;
+    margin: 5vmin 5vmin;
+    font-size: xx-large;
+}
+.answer-zone {
+    background-color: white;
+    height: 10vmin;
+    margin: 0px 20vmin 10vmin;
+    font-size: xx-large;
+}
+
+.button-zone {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 20vmin;
+    width: 50vmin;
+    margin: 10vmin auto 0px auto;
+    grid-gap: 50px;
+
+}
+
+.button {
+height: 10vmin;
+width: 20vmin;
+font-size: xx-large;
+}
+
+#wager-button {
+color: gold;
+background-color: darkolivegreen;
+border-radius: 10% 10% 10% 50%;
+height: 10vmin;
+width: 20vmin;
+margin: 0 0 0 5vmin;
+outline-style: none;
+font-size: large;
+}
+
+#next {
+width: 15vmin;
+margin: 0 0 5px 60vmin;
+color: black;
+font-size: large;
+}
+
+#new-game {
+width: 15vmin;
+margin: 0 0 2px 60vmin;
+color: black;
+font-size: large;
+}
