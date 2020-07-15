@@ -1,0 +1,10 @@
+let question1 ="Japan and China did not sign a peace treaty after World War Two, and so are technically still at war"; //true
+let question2 ="The currency of France is the Franc"; //false
+let question3 ="The can-opener was not invented until over 45 years after the tin can"; //true
+let question4 ="There is a Mcdonalds franchise on every continent"; //false
+let question5 ="Sydney is the capital city of Australia"; //false
+let question6 ="In Alabama it is illegal to throw confetti or spray silly string"; //true
+let question7 ="In the UK it is illegal to operate a cow while under the influence"; //true
+let question8 ="In Japan it is illegal to be clinically obese"; //true
+let question9 ="In California it is illegal to wear cowboy boots unless you own at least two cows"; //true
+let question10 ="In France it is illegal to name your pig,'Napoleon'"; //false
