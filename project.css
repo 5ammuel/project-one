@@ -52,7 +52,7 @@ body {
 
 .button {
 height: 10vmin;
-width: 20vmin;
+width: 22vmin;
 font-size: xx-large;
 }
 
@@ -64,7 +64,7 @@ height: 10vmin;
 width: 20vmin;
 margin: 0 0 0 5vmin;
 outline-style: none;
-font-size: large;
+font-size: xx-large;
 }
 
 #next {
