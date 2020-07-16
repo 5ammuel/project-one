@@ -46,6 +46,14 @@ body {
     font-size: xx-large;
     text-align: center;
 }
+.sub-btn {
+    background-color: white;
+    height: 5vmin;
+    width: 15vmin;
+    margin: 0 33vmin 5vmin 33vmin;
+    font-size: large;
+    font-weight: bold;
+}
 
 .button-zone {
     height: 20vmin;
