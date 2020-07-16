@@ -7,7 +7,8 @@ h1 {
 
 .container1 {
     box-sizing: border-box;
-    background-color: rgb(147, 161, 152);
+    background: rgb(245,244,242);
+    background: radial-gradient(circle, rgba(245,244,242,1) 0%, rgba(149,145,145,0.6914556962025317) 88%, rgba(47,47,46,1) 100%);
     border: ridge 5px;
     border-color: rgb(201, 166, 13);
     
@@ -16,6 +17,8 @@ h1 {
 .container2 {
     box-sizing: border-box;
     border: ridge 5px;
+    background: rgb(228,193,0);
+    background: radial-gradient(circle, rgba(228,193,0,0) 0%, rgba(9,121,33,1) 35%, rgba(0,255,54,0.30379746835443033) 100%);
 }
 
 body {
@@ -28,10 +31,14 @@ body {
 }
 
 .query-zone {
-    background-color: rgb(221, 245, 215);
+    background: rgb(253, 253, 253);
+    background: linear-gradient(180deg, rgb(252, 249, 245) 0%, rgba(149,145,145,0.6914556962025317) 58%, rgba(238,204,88,1) 120%);
     height: 30vmin;
     margin: 5vmin 5vmin;
     font-size: xx-large;
+    border-style: inset;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
 }
 .answer-zone {
     height: 10vmin;
@@ -63,19 +70,13 @@ body {
 
 }
 
-.button {
-height: 10vmin;
-width: 22vmin;
-font-size: xx-large;
-}
-
 #wager-button {
 color: gold;
-background-color: darkolivegreen;
+background-color: rgb(75, 85, 58);
 border-radius: 10% 10% 10% 50%;
 height: 10vmin;
 width: 20vmin;
-margin: 3px 0 0 5vmin;
+margin: 5px 0 0 5px;
 outline-style: none;
 font-size: xx-large;
 }
@@ -85,11 +86,13 @@ width: 15vmin;
 margin: 0 0 5px 60vmin;
 color: black;
 font-size: large;
+font-weight: bolder;
 }
 
 #new-game {
-width: 15vmin;
-margin: 0 0 3px 60vmin;
+width: 19vmin;
+margin: 0 0 5px 58vmin;
 color: black;
 font-size: large;
+font-weight: bolder;
 }
