@@ -20,7 +20,8 @@ let questions = [
 //VARIABLES
 const queryElement = document.querySelector(".query");
 const answerElement = document.querySelector(".answer-sheet")
-let feedback;
+let input = document.getElementById("sub-btn");
+
 
 //EVENT LISTENERS
 newGame.addEventListener("mousedown", () => {
@@ -32,15 +33,14 @@ next.addEventListener("click", () => {
 });
 newGame.addEventListener("mouseup", newQuestion())
 
-// for (let i = 0; i < questions.length -5; i++) {
 
-// if (feedback === questions[i][2]){
-// 	document.write("You got it right!");
-// }else{
-// 	document.write("Oops!");
-// }
+if (input === questions[currentQuestion][2]){
+	document.write("You got it right!");
+}else{
+	document.write("Oops!");
+}
 
-// }
+
 //FUNCTIONS
 function newQuestion() {
     randomQuestions = questions.sort(() => Math.random() - .5)
