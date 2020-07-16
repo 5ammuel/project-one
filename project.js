@@ -20,7 +20,7 @@ let questions = [
 //VARIABLES
 const queryElement = document.querySelector(".query");
 const answerElement = document.querySelector(".answer-sheet")
-let input = document.getElementById("sub-btn");
+let input = document.querySelector(".sub-btn");
 
 
 //EVENT LISTENERS
@@ -32,13 +32,20 @@ next.addEventListener("click", () => {
     newQuestion()
 });
 newGame.addEventListener("mouseup", newQuestion())
-
-
-if (input === questions[currentQuestion][2]){
-	document.write("You got it right!");
+input.addEventListener("click",(event) => {
+event.preventDefault()
+console.log("hello")
+	if (answerElement.value === questions[currentQuestion][2]){
+	alert("You got it right!")
+	answerElement.value="";
 }else{
-	document.write("Oops!");
+	alert("Oops!")
+	answerElement.value = '';
 }
+
+});
+
+
 
 
 //FUNCTIONS
