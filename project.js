@@ -19,9 +19,8 @@ let questions = [
 ];
 //VARIABLES
 const queryElement = document.querySelector(".query");
-const buttonZoneElement = document.querySelector(".button-zone")
-const answerElement = document.querySelector(".answer-zone")
-let feedback = "true";
+const answerElement = document.querySelector(".answer-sheet")
+let feedback;
 
 //EVENT LISTENERS
 newGame.addEventListener("mousedown", () => {
@@ -32,8 +31,6 @@ next.addEventListener("click", () => {
     newQuestion()
 });
 newGame.addEventListener("mouseup", newQuestion())
-truthy.addEventListener("click", superTruth());
-falsey.addEventListener('click', superFalse());
 
 // for (let i = 0; i < questions.length -5; i++) {
 
@@ -45,12 +42,6 @@ falsey.addEventListener('click', superFalse());
 
 // }
 //FUNCTIONS
-function superTruth() {
-	feedback = "true"
-};
-function superFalse() {
-	feedback = "false"
-};
 function newQuestion() {
     randomQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
