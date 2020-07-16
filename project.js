@@ -87,6 +87,7 @@ const queries = [
 ];
 const queryElement = document.querySelector(".query");
 const buttonZoneElement = document.querySelector(".button-zone")
+const answerElement = document.querySelector(".answer-zone")
 let randomQuestions
 let currentQuestion
 //EVENT LISTENERS
@@ -108,4 +109,9 @@ function newQuestion() {
 function displayQuestion(question) {
    queryElement.innerText = question.question
 }
-
+function displayAnswers(answers) {
+	if (question == true) {
+	return answerElement.innerText = "Correct!"
+}else{ return answerElement.innerText = "Incorrect"
+}
+}
