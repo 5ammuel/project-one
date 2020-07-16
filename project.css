@@ -34,19 +34,23 @@ body {
     font-size: xx-large;
 }
 .answer-zone {
+    height: 10vmin;
+    margin: 0px 15vmin 10vmin 15vmin;
+
+}
+.answer-sheet {
     background-color: white;
     height: 10vmin;
-    margin: 0px 20vmin 10vmin;
+    width: 30vmin;
+    margin: 0px 10vmin 10vmin;
     font-size: xx-large;
 }
 
 .button-zone {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
     height: 20vmin;
-    width: 50vmin;
+    width: 70vmin;
     margin: 10vmin auto 0px auto;
-    grid-gap: 50px;
+    font-size: xx-large;
 
 }
 
@@ -62,7 +66,7 @@ background-color: darkolivegreen;
 border-radius: 10% 10% 10% 50%;
 height: 10vmin;
 width: 20vmin;
-margin: 0 0 0 5vmin;
+margin: 3px 0 0 5vmin;
 outline-style: none;
 font-size: xx-large;
 }
@@ -76,7 +80,7 @@ font-size: large;
 
 #new-game {
 width: 15vmin;
-margin: 0 0 2px 60vmin;
+margin: 0 0 3px 60vmin;
 color: black;
 font-size: large;
 }

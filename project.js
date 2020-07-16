@@ -21,7 +21,7 @@ let questions = [
 const queryElement = document.querySelector(".query");
 const buttonZoneElement = document.querySelector(".button-zone")
 const answerElement = document.querySelector(".answer-zone")
-let feedback;
+let feedback = "true";
 
 //EVENT LISTENERS
 newGame.addEventListener("mousedown", () => {
@@ -35,15 +35,15 @@ newGame.addEventListener("mouseup", newQuestion())
 truthy.addEventListener("click", superTruth());
 falsey.addEventListener('click', superFalse());
 
-for (let i = 0; i < questions.length -5; i++) {
+// for (let i = 0; i < questions.length -5; i++) {
 
-if (feedback === questions[i][2]){
-	document.write("You got it right!");
-}else{
-	document.write("Oops!");
-}
-displayAnswers();
-}
+// if (feedback === questions[i][2]){
+// 	document.write("You got it right!");
+// }else{
+// 	document.write("Oops!");
+// }
+
+// }
 //FUNCTIONS
 function superTruth() {
 	feedback = "true"
@@ -61,5 +61,8 @@ function displayQuestion(question) {
    queryElement.innerText = questions[0][1]
 };
 function displayAnswers(answer) {
-	answerElement.innerText = ""
-};
+	if (feedback === questions[i][2]) {
+		answerElement.innerText ='You got it right!';
+	} else {
+		answerElement.innertext ='Oops!';
+	}};
