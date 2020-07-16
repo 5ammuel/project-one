@@ -1,95 +1,28 @@
 //BUTTONS
 const newGame = document.querySelector("#new-game");
 const truthy = document.querySelector("#true-button");
-//Register if answer is correct
 const falsey = document.querySelector("#false-button");
-//Register if answer is correct
 const next = document.querySelector("#next");
 
 //QUESTIONS
-const queries = [
-	{
-		question: 'The currency of France is the Franc',
-		answers: [
-			{ text: 'True!', correct: false },
-			{ text: 'False!', correct: true },
-		],
-	},
-
-	{
-		question:
-			'Japan and China did not sign a peace treaty after World War Two, and so are technically still at war',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question:
-			'The can-opener was not invented until over 45 years after the tin can',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question: 'As of the year 2020 there is a Mcdonalds franchise on every continent',
-		answers: [
-			{ text: 'True!', correct: false },
-			{ text: 'False!', correct: true },
-		],
-	},
-	{
-		question: 'Sydney is the capital city of Australia',
-		answers: [
-			{ text: 'True!', correct: false },
-			{ text: 'False!', correct: true },
-		],
-	},
-	{
-		question:
-			'In Alabama it is illegal to throw confetti or spray silly string',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question:
-			'In the UK it is illegal to operate a cow while under the influence',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question: 'In Japan it is illegal to be clinically obese',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question:
-			'In California it is illegal to wear cowboy boots unless you own at least two cows',
-		answers: [
-			{ text: 'True!', correct: true },
-			{ text: 'False!', correct: false },
-		],
-	},
-	{
-		question: "In France it is illegal to name your pig,'Napoleon'",
-		answers: [
-        {text: "True!", correct: false}, 
-        {text: "False!", correct: true}
-    ]
-    }
+let questions = [
+[1,"The currency of France is the Franc","false"],
+[2,"Japan and China did not sign a peace treaty after World War Two, and so are technically still at war", "true"],
+[3,"The can-opener was not invented until over 45 years after the tin can", "true"],
+[4,"As of the year 2020 there is a Mcdonalds franchise on every continent", "false"],
+[5,"Sydney is the capital city of Australia", "false"],
+[6,"In Alabama it is illegal to throw confetti or spray silly string", "true"],
+[7,"In the UK it is illegal to operate a cow while under the influence", "true"],
+[8,"In Japan it is illegal to be clinically obese", "true"],
+[9,"In California it is illegal to wear cowboy boots unless you own at least two cows", "true"],
+[10,"In France it is illegal to name your pig, 'Napoleon'", "false"]
 ];
+//VARIABLES
 const queryElement = document.querySelector(".query");
 const buttonZoneElement = document.querySelector(".button-zone")
 const answerElement = document.querySelector(".answer-zone")
-let randomQuestions
-let currentQuestion
+let feedback;
+
 //EVENT LISTENERS
 newGame.addEventListener("mousedown", () => {
 	{location.reload()}
@@ -99,23 +32,34 @@ next.addEventListener("click", () => {
     newQuestion()
 });
 newGame.addEventListener("mouseup", newQuestion())
-// truthy.addEventListener("click", checkAnswer());
+truthy.addEventListener("click", superTruth());
+falsey.addEventListener('click', superFalse());
 
+for (let i = 0; i < questions.length -5; i++) {
 
-
+if (feedback === questions[i][2]){
+	document.write("You got it right!");
+}else{
+	document.write("Oops!");
+}
+displayAnswers();
+}
 //FUNCTIONS
+function superTruth() {
+	feedback = "true"
+};
+function superFalse() {
+	feedback = "false"
+};
 function newQuestion() {
-    randomQuestions = queries.sort(() => Math.random() - .5)
+    randomQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     displayQuestion(randomQuestions[currentQuestion])
 };
 
 function displayQuestion(question) {
-   queryElement.innerText = question.question
+   queryElement.innerText = questions[0][1]
 };
-// function displayAnswers() {
-// 	if () {
-// 	return answerElement.innerText = "Correct!"
-// }else{ return answerElement.innerText = "Incorrect"
-// }
-// };
+function displayAnswers(answer) {
+	answerElement.innerText = ""
+};
