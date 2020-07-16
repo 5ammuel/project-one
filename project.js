@@ -2,7 +2,7 @@
 const newGame = document.querySelector("#new-game");
 const truthy = document.querySelector("#true-button");
 //Register if answer is correct
-const falsey = document.querySelector("#false-button")
+const falsey = document.querySelector("#false-button");
 //Register if answer is correct
 const next = document.querySelector("#next");
 
@@ -91,11 +91,15 @@ const answerElement = document.querySelector(".answer-zone")
 let randomQuestions
 let currentQuestion
 //EVENT LISTENERS
-newGame.addEventListener("click", newQuestion());
+newGame.addEventListener("mousedown", () => {
+	{location.reload()}
+});
 next.addEventListener("click", () => { 
     currentQuestion++
     newQuestion()
 });
+newGame.addEventListener("mouseup", newQuestion())
+// truthy.addEventListener("click", checkAnswer());
 
 
 
@@ -104,14 +108,14 @@ function newQuestion() {
     randomQuestions = queries.sort(() => Math.random() - .5)
     currentQuestion = 0
     displayQuestion(randomQuestions[currentQuestion])
-}
+};
 
 function displayQuestion(question) {
    queryElement.innerText = question.question
-}
-function displayAnswers(answers) {
-	if (question == true) {
-	return answerElement.innerText = "Correct!"
-}else{ return answerElement.innerText = "Incorrect"
-}
-}
+};
+// function displayAnswers() {
+// 	if () {
+// 	return answerElement.innerText = "Correct!"
+// }else{ return answerElement.innerText = "Incorrect"
+// }
+// };
